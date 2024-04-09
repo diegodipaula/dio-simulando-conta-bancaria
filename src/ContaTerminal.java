@@ -1,15 +1,31 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Locale;
+import java.util.Scanner;
+
 public class ContaTerminal {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+
+        System.out.println("Por favor, digite o seu primeiro nome: ");
+        String firstName = scanner.next();
+
+        System.out.println("Agora, digite o seu sobrenome: ");
+        String lastName = scanner.next();
+
+        System.out.println("Agora digite o número de sua agencia (Exemplo: 000-0): ");
+        String agencyNumber = scanner.next();
+
+        System.out.println("Ótimo, agora digite o número da conta: ");
+        int accountNumber = scanner.nextInt();
+
+        System.out.println("Estamos finalizando, agora digite o valor do seu primeiro depósito: ");
+        double cashDeposit = scanner.nextDouble();
+
+
+        //Imprimindo o resultado com os dados fornecidos pelo cliente
+        System.out.print("Olá " + firstName + " " + lastName + ", obrigado por criar uma conta em nosso banco! Sua agência é " + agencyNumber + ", o número da sua conta bancária é " + accountNumber + " e o seu saldo inicial de R$ " + cashDeposit + " já está disponível para saque.");
+
+
+
     }
 }
